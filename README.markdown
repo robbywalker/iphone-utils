@@ -5,6 +5,5 @@ A collection of utilities we found useful when writing iPhone Apps, shared under
 
 Authors
 -------
-Robby Walker
-Wayne Crosby
+Robby Walker, Wayne Crosby
 
