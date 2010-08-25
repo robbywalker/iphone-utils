@@ -74,7 +74,11 @@ static NSMutableDictionary *properties = nil;
 }
 
 + (void)setProperty:(NSString *)propertyName toValue:(NSString *)value {
-  [properties setObject:value forKey:propertyName];
+  if (value) {
+    [properties setObject:value forKey:propertyName];
+  } else {
+    [properties removeObjectForKey:propertyName];
+  }
   [PersistentState save];
 }
 
