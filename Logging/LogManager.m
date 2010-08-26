@@ -43,7 +43,7 @@ static NSMutableSet *delegates;
             atLine:(int)lineNumber
             ofType:(NSString *)severity {
   if ([delegates count]) {
-    NSString *formattedMessage = FORMAT(@"info - %@:%d - %@", className, lineNumber, message);
+    NSString *formattedMessage = FORMAT(@"%f - %@ - %@:%d - %@", [[NSDate date] timeIntervalSince1970], severity, className, lineNumber, message);
     NSEnumerator *e = [delegates objectEnumerator];
     id delegate;
     while ((delegate = [e nextObject])) {
